@@ -1,0 +1,5 @@
+d:\users\eric\documents\visual studio 11\Projects\NADIA\NADIA\bin\Debug\NADIA.exe.config
+d:\users\eric\documents\visual studio 11\Projects\NADIA\NADIA\bin\Debug\NADIA.exe
+d:\users\eric\documents\visual studio 11\Projects\NADIA\NADIA\bin\Debug\NADIA.pdb
+d:\users\eric\documents\visual studio 11\Projects\NADIA\NADIA\obj\Debug\NADIA.exe
+d:\users\eric\documents\visual studio 11\Projects\NADIA\NADIA\obj\Debug\NADIA.pdb
