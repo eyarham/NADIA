@@ -10,6 +10,12 @@ namespace NADIA
 {
     class Program
     {
+        public DateTime alarmTime
+        {
+            get;
+            set;
+        }
+
         //public SpeechRecognitionEngine recognitionEngine;
         public SpeechRecognizer recognizer;
         string message;
@@ -77,6 +83,8 @@ namespace NADIA
             speaker.Volume = 100;
             speaker.Speak(message);
         }
+
+
         //public string recognize()
         //{
         //    if (!string.IsNullOrEmpty(message) && outputMessage != message)
@@ -113,6 +121,9 @@ namespace NADIA
                     System.Diagnostics.Process.Start("Google Chrome.lnk");
                     message = "";
                     executedCommand = true;
+                    break;
+                case "set an alarm ":
+                    executedCommand = setAlarm();
                     break;
                 case "nadia time ":
                     speak("Sir The Time is " + DateTime.Now.ToString("h:mm tt"));
@@ -159,6 +170,24 @@ namespace NADIA
                     break;
             }
             return executedCommand;
+        }
+
+        public bool setAlarm()
+        {
+            bool returnvalue = false;
+            speak("What time would you like?");
+            switch (message)
+            {
+                case "noon ":
+                    speak("I will set it for noon.");
+                    DateTime thisAlarmTime;
+                    DateTime.TryParse("12:00;00PM", out thisAlarmTime);
+                    alarmTime = thisAlarmTime;
+                    returnvalue= true;
+                    break;
+            }
+            Console.WriteLine("Alarm set.");
+            return returnvalue;
         }
     }
 }
